@@ -25,6 +25,7 @@ Edit `.env.local` with your credentials:
 # Clerk Authentication
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_Z....
 CLERK_SECRET_KEY=sk_test_nD49RceX3Zp....
+NEXT_PUBLIC_API_URL=http://localhost:3001
 ```
 
 
@@ -32,6 +33,7 @@ Edit `.env` with your credentials:
 ```env
 # Clerk Authentication
 CLERK_SECRET_KEY=sk_test_nD49RceX3Zp....
+FRONTEND_URL=http://localhost:3000
 ```
 3. **Install application**
 ```bash
