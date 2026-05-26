@@ -5,13 +5,16 @@
 [![Clerk](https://img.shields.io/badge/Clerk-Auth%20Solution-4A154B?style=flat)](https://clerk.com/)
 
 ## Preview
-### Web
 
-![Desktop](./frontend/public/web-preview.png)
+### Web
+<p align="center">
+  <img src="./frontend/public/web-preview.png" width="70%" />
+</p>
 
 ### Mobile
-
-![Mobile](./frontend/public/mobile-preview.png)
+<p align="center">
+  <img src="./frontend/public/mobile-preview.png" width="25%" />
+</p>
 
 ## 🚀 Quick Start
 
