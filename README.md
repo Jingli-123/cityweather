@@ -74,12 +74,4 @@ npm run dev
 5. **Start the application for dev environment**
 http://localhost:3000
 
-cd backend
-npm install
-npm run dev
-````
-
-5. **Start the application for dev environment**
-http://localhost:3000
-
 
