@@ -27,7 +27,7 @@ export default function HeroText() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl md:text-5xl font-bold p-2"
+          className="text-2xl md:text-5xl text-black font-bold p-2"
         >
           {texts[index]}
         </motion.h1>

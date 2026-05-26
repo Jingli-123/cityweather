@@ -20,10 +20,10 @@
 }
 
 .nav-link-base {
-  @apply text-base font-medium leading-6 transition-all;
+  @apply text-base text-[#22419e] font-medium leading-6 transition-all;
 }
 .nav-link-active {
-  @apply text-[var(--color-brand)] border-b-2 border-[var(--color-brand)] pb-0.5;
+  @apply text-[#6ea8fe] border-b-2 border-[#6ea8fe] pb-0.5;
 }
 
 body {
