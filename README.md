@@ -49,19 +49,22 @@ FRONTEND_URL=http://localhost:3000
 PORT=3001
 ```
 3. **Install application with docker**
+
+in the project root directory
 ```bash
 docker compose up
 ````
 
 4. **Install application without docker**
-in root
+
+in the project root directory
 ```bash
 cd frontend
 npm install
 npm run dev
 ````
 
-in root
+in the project root directory
 ```bash
 cd backend
 npm install
