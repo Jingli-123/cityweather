@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CITIES, WEATHER_CODES, WEATHER_ICONS } from "@/lib/constance";
+import { CITIES, WEATHER_CODES} from "@/lib/constance";
 import PopUp from "./PopUp";
 import { useEffect, useState } from "react";
 import MapPin from "./MapPin";

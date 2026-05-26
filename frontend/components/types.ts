@@ -32,7 +32,8 @@ export interface ICurrentWeather {
 export interface IMobileCityCardProps {
   cityName: string;
   cityPic: string;
-  loading: boolean;
-  date: string;
-  weather: string;
+  selectedCity: string;
+  latitude: number;
+  longitude: number;
+  onSelect: (name: string) => void;
 }

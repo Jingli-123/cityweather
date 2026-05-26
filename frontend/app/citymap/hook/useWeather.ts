@@ -17,11 +17,6 @@ export default function useWeather() {
   const getCurrentWeather = useCallback(
     async (latitude: number, longitude: number, cityName?: string) => {
       setLoading(true);
-      // if (!isSignedIn) {
-      //   toast.error("Please login");
-      //   setLoading(false);
-      //   return;
-      // }
       try {
         const url = weatherUrls.getCurrentWeather;
         const res = await axios.get(url(latitude, longitude));
@@ -32,16 +27,17 @@ export default function useWeather() {
           return data;
         } else {
           setcurrentWeather(null);
-          return toast.error("Something went wrong.");
+          console.error("Something went wrong.");
         }
       } catch (err: unknown) {
         setcurrentWeather(null);
         if (err instanceof Error) {
-          return toast.error(
+          console.error(
             `Fetch current weather failed with error: ${err.message}`,
           );
+          toast.error("Weather service unavailable");
         } else {
-          return toast.error(
+          console.error(
             `Fetch current weather failed with unknown error: ${err}`,
           );
         }

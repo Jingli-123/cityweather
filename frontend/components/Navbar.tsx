@@ -25,12 +25,7 @@ export default function Navbar() {
     <header className="w-full fixed top-0 z-50 bg-white/40 backdrop-blur-2xl border-b border-white/20 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
       <div className="wrapper navbar-height py-4 px-2 flex justify-between items-center">
         <Link href="/" className="flex gap-0.5 items-center">
-          {/* <Image
-            src="/assets/logo.png"
-            alt="Bookified"
-            width={42}
-            height={26}
-          /> */}
+       
           <span className="text-lg md:text-2xl font-bold">CityWeather</span>
         </Link>
 
