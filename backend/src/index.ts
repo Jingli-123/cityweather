@@ -11,7 +11,8 @@ app.use(cors());
 app.use(express.json());
 const io = new Server(server, {
   cors: {
-    origin: process.env.FRONTEND_URL,
+    // origin: process.env.FRONTEND_URL,
+    origin:"https://cityweather-pink.vercel.app/"
   },
 });
 
@@ -46,7 +47,8 @@ io.on("connection", (socket) => {
     console.log("user disconnected");
   });
 });
-const PORT = process.env.PORT || 3001
+
+const PORT = process.env.PORT
 
 server.listen(PORT, () => {
   console.log(`Server running on port 3001 ${PORT}`);
