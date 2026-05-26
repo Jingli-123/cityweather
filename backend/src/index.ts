@@ -11,8 +11,7 @@ app.use(cors());
 app.use(express.json());
 const io = new Server(server, {
   cors: {
-    // origin: process.env.FRONTEND_URL,
-    origin:"https://cityweather-pink.vercel.app/"
+    origin: process.env.FRONTEND_URL,
   },
 });
 
