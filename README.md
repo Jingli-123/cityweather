@@ -4,6 +4,15 @@
 [![Typescript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Clerk](https://img.shields.io/badge/Clerk-Auth%20Solution-4A154B?style=flat)](https://clerk.com/)
 
+## Preview
+### Web
+
+![Desktop](./frontend/public/web-preview.png)
+
+### Mobile
+
+![Mobile](./frontend/public/mobile-preview.png)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -35,11 +44,35 @@ Edit `.env` with your credentials:
 CLERK_SECRET_KEY=sk_test_nD49RceX3Zp....
 FRONTEND_URL=http://localhost:3000
 ```
-3. **Install application**
+3. **Install application with docker**
 ```bash
 docker compose up
 ````
 
-6. **Start the application for dev environment**
+4. **Install application without docker**
+in root
+```bash
+cd frontend
+npm install
+npm run dev
+````
+
+in root
+```bash
+cd backend
+npm install
+npm run dev
+````
+
+5. **Start the application for dev environment**
 http://localhost:3000
+
+cd backend
+npm install
+npm run dev
+````
+
+5. **Start the application for dev environment**
+http://localhost:3000
+
 
