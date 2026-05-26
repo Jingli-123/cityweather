@@ -10,9 +10,8 @@ export default function MobileCityMap() {
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
   useEffect(() => {
     socket.on("weather-alert", (data) => {
-      console.log(data);
       const weather = WEATHER_CODES[data.code];
-      toast.error(`${data.city} Weather Alert: ${weather}`);
+      toast.info(`${data.city} Weather Alert: ${weather}`);
     });
     return () => {
       socket.off("weather-alert");
@@ -22,7 +21,6 @@ export default function MobileCityMap() {
   return (
     <div className="mt-[80px]">
       {CITIES.map((item) => {
-        console.log("cityobj", item);
         return (
           <div
             key={item.name}

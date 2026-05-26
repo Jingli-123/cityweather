@@ -20,7 +20,6 @@ export default function useWeather() {
       try {
         const url = weatherUrls.getCurrentWeather;
         const res = await axios.get(url(latitude, longitude));
-        console.log("current weather", res);
         if (res.status === 200) {
           setcurrentWeather(res.data.current);
           const data = { ...res.data.current, cityName: cityName };

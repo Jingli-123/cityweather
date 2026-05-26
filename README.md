@@ -35,8 +35,8 @@ Create `.env` files in /backend: `.env` and `.env.local` in the /frontend direct
 Edit `.env.local` with your credentials:
 ```env
 # Clerk Authentication
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_Z....
-CLERK_SECRET_KEY=sk_test_nD49RceX3Zp....
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZGVzaXJlZC1zbHVnLTQ5LmNsZXJrLmFjY291bnRzLmRldiQ
+CLERK_SECRET_KEY=sk_test_nD49RceX3ZpLB6XLkX8vDqQ8J8JccCSXPqZSAYJM04
 NEXT_PUBLIC_API_URL=http://localhost:3001
 ```
 
@@ -44,8 +44,9 @@ NEXT_PUBLIC_API_URL=http://localhost:3001
 Edit `.env` with your credentials:
 ```env
 # Clerk Authentication
-CLERK_SECRET_KEY=sk_test_nD49RceX3Zp....
+CLERK_SECRET_KEY=sk_test_nD49RceX3ZpLB6XLkX8vDqQ8J8JccCSXPqZSAYJM04
 FRONTEND_URL=http://localhost:3000
+PORT=3001
 ```
 3. **Install application with docker**
 ```bash

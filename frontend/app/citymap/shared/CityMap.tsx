@@ -14,9 +14,8 @@ export default function CityMap() {
 
   useEffect(() => {
     socket.on("weather-alert", (data) => {
-      console.log(data);
       const weather = WEATHER_CODES[data.code];
-      toast.error(`${data.city} Weather Alert: ${weather}`);
+      toast.info(`${data.city} Weather Alert: ${weather}`);
     });
     return () => {
       socket.off("weather-alert");
