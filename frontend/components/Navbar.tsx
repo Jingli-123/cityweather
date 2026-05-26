@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="wrapper navbar-height py-4 px-2 flex justify-between items-center">
         <Link href="/" className="flex gap-0.5 items-center">
        
-          <span className="text-lg md:text-2xl font-bold">CityWeather</span>
+          <span className="text-lg md:text-2xl text-black font-bold">CityWeather</span>
         </Link>
 
         <nav className="w-fit flex gap-7.5 items-center px-2">
