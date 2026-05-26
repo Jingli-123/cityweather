@@ -15,19 +15,21 @@ export default function useWeather() {
   );
 
   const getCurrentWeather = useCallback(
-    async (latitude: number, longitude: number) => {
+    async (latitude: number, longitude: number, cityName?: string) => {
       setLoading(true);
-      if (!isSignedIn) {
-        toast.error("Please login");
-        setLoading(false);
-        return;
-      }
+      // if (!isSignedIn) {
+      //   toast.error("Please login");
+      //   setLoading(false);
+      //   return;
+      // }
       try {
         const url = weatherUrls.getCurrentWeather;
         const res = await axios.get(url(latitude, longitude));
         console.log("current weather", res);
         if (res.status === 200) {
           setcurrentWeather(res.data.current);
+          const data = { ...res.data.current, cityName: cityName };
+          return data;
         } else {
           setcurrentWeather(null);
           return toast.error("Something went wrong.");

@@ -2,15 +2,13 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import useWeather from "@/app/citymap/hook/useWeather";
 
-const texts = [
-  "Realtime Weather",
-  "Live City Alerts",
-  "Modern Fullstack App",
-];
+const texts = ["Realtime Weather", "Live City Alerts", "Modern Fullstack App"];
 
 export default function HeroText() {
   const [index, setIndex] = useState(0);
+  const { loading, currentWeather, getCurrentWeather } = useWeather();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,7 +19,7 @@ export default function HeroText() {
   }, []);
 
   return (
-    <div className="h-24 flex items-center justify-center overflow-hidden">
+    <div className="h-full w-[85%] md:w-150 flex items-center justify-center overflow-hidden bg-blue-500/10 backdrop-blur-md border border-white/20">
       <AnimatePresence mode="wait">
         <motion.h1
           key={texts[index]}
@@ -29,7 +27,7 @@ export default function HeroText() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl font-bold text-[#2e3ef4]"
+          className="text-2xl md:text-5xl font-bold p-2"
         >
           {texts[index]}
         </motion.h1>

@@ -1,6 +1,5 @@
 "use client";
 
-import { Typography } from "@mui/material";
 import Image from "next/image";
 import { CITIES, WEATHER_CODES, WEATHER_ICONS } from "@/lib/constance";
 import PopUp from "./PopUp";

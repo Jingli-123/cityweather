@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
-import { UserButton, useUser, useAuth } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 import { Button, useMediaQuery, useTheme } from "@mui/material";
 import { FiAlignJustify } from "react-icons/fi";
 import MobileNavMenu from "./MobileNavMenu";
@@ -13,7 +13,6 @@ import { navItems } from "@/lib/constance";
 export default function Navbar() {
   const pathName = usePathname();
   const { user } = useUser();
-  const { userId } = useAuth();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
