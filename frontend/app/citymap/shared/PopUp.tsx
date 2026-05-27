@@ -54,7 +54,7 @@ export default function PopUp({ onClose, cityName }: PopUpProps) {
               {CURRENT_UNITS.temperature_2m}
             </div>
             <div className="flex flex-row items-center gap-2">
-              Temperature: {currentWeather?.wind_speed_10m}
+              Wind speed: {currentWeather?.wind_speed_10m}
               {CURRENT_UNITS.wind_speed_10m}
             </div>
           </div>

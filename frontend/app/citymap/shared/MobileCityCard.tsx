@@ -5,7 +5,7 @@ import { CircularProgress, Typography } from "@mui/material";
 import { IMobileCityCardProps } from "@/components/types";
 import useWeather from "../hook/useWeather";
 import dayjs from "dayjs";
-import { WEATHER_CODES } from "@/lib/constance";
+import { WEATHER_CODES, CURRENT_UNITS } from "@/lib/constance";
 
 export default function MobileCityCard({
   cityName,
@@ -56,7 +56,10 @@ export default function MobileCityCard({
             {cityName}
           </Typography>
           {selectedCity === cityName ? (
-            <></>
+            <Typography variant="caption" className="text-white !m-0 !p-0">
+              {currentWeather?.temperature_2m}
+              {CURRENT_UNITS.temperature_2m}
+            </Typography>
           ) : (
             <Typography variant="caption" className="text-white !m-0 !p-0">
               Tap to view weather
