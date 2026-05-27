@@ -56,10 +56,12 @@ export default function MobileCityCard({
             {cityName}
           </Typography>
           {selectedCity === cityName ? (
-            <Typography variant="caption" className="text-white !m-0 !p-0">
-              {currentWeather?.temperature_2m}
-              {CURRENT_UNITS.temperature_2m}
-            </Typography>
+            currentWeather?.temperature_2m && (
+              <Typography variant="caption" className="text-white !m-0 !p-0">
+                {currentWeather?.temperature_2m}
+                {CURRENT_UNITS.temperature_2m}
+              </Typography>
+            )
           ) : (
             <Typography variant="caption" className="text-white !m-0 !p-0">
               Tap to view weather
