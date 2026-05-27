@@ -45,22 +45,33 @@ export default function MobileCityCard({
 
       {/* content */}
       <div className="relative z-10 h-full flex items-center justify-between px-6">
-        <Typography
-          variant="h5"
-          sx={{
-            color: selectedCity === cityName ? "yellow" : "white",
-          }}
-        >
-          {cityName}
-        </Typography>
+        <div className="flex flex-col gap-1">
+          <Typography
+            variant="h5"
+            className="!m-0 !p-0"
+            sx={{
+              color: selectedCity === cityName ? "yellow" : "white",
+            }}
+          >
+            {cityName}
+          </Typography>
+          {selectedCity === cityName ? (
+            <></>
+          ) : (
+            <Typography variant="caption" className="text-white !m-0 !p-0">
+              Tap to view weather
+            </Typography>
+          )}
+        </div>
+
         {loading ? (
           <CircularProgress />
         ) : (
           <div>
-            {currentWeather && (
+            {currentWeather && selectedCity === cityName && (
               <>
                 <Typography
-                  variant="body2"
+                  variant="body1"
                   sx={{
                     color: "white",
                   }}
@@ -69,7 +80,7 @@ export default function MobileCityCard({
                 </Typography>
 
                 <Typography
-                  variant="body2"
+                  variant="h6"
                   sx={{
                     color: "white",
                   }}
