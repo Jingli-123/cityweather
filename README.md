@@ -30,7 +30,7 @@ cd cityweather
 ```
 
 2. **Environment Setup**
-Create `.env` files in /backend: `.env` and `.env.local` in the /frontend directory.
+Create `.env` files in /backend；`.env.local` in the /frontend directory.
 
 Edit `.env.local` with your credentials:
 ```env
