@@ -5,7 +5,7 @@
 [![Clerk](https://img.shields.io/badge/Clerk-Auth%20Solution-4A154B?style=flat)](https://clerk.com/)
 
 ## Preview
-
+https://cityweather-pink.vercel.app/
 ### Web
 <p align="center">
   <img src="./frontend/public/web-preview.png" width="70%" />
