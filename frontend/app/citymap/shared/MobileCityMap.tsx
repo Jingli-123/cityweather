@@ -12,6 +12,7 @@ export default function MobileCityMap() {
     socket.on("weather-alert", (data) => {
       if(data.error){
         toast.error('Weather service temporarily unavailable.')
+        return;
       }
       const weather = WEATHER_CODES[data.code];
       toast.info(`${data.city} Weather Alert: ${weather}`);

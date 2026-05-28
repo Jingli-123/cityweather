@@ -34,6 +34,7 @@ setInterval(async () => {
       error:data.error,
       reason:data.reason,
     });
+    return;
     }
     const weatherCode = data.current.weather_code;
     io.emit("weather-alert", {
