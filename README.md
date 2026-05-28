@@ -16,6 +16,21 @@
   <img src="./frontend/public/mobile-preview.png" width="25%" />
 </p>
 
+## Testing
+
+Basic end-to-end testing has been implemented using Playwright to validate core user flows and UI visibility.
+
+Current test coverage includes:
+
+Homepage rendering
+Page title validation
+Navigation bar visibility
+Core frontend interaction checks
+
+GitHub Actions workflow has also been configured to automatically run tests on push and pull request events.
+
+Further test coverage and integration testing would be expanded in future iterations.
+
 ## 🚀 Quick Start
 
 ### Prerequisites
