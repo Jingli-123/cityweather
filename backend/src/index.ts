@@ -29,12 +29,16 @@ setInterval(async () => {
 
     const data = await response.json();
     console.log("weather", data);
+    if(data.error){
+      io.emit("weather-alert", {
+      error:data.error,
+      reason:data.reason,
+    });
+    }
     const weatherCode = data.current.weather_code;
     io.emit("weather-alert", {
       city: "Melbourne",
       code: weatherCode,
-      error:data.error,
-      reason:data.reason,
     });
     console.log("weather checked");
   } catch (error) {
