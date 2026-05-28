@@ -57,10 +57,12 @@ export default function MobileCityCard({
           </Typography>
           {selectedCity === cityName ? (
             currentWeather?.temperature_2m && (
-              <Typography variant="caption" className="text-white !m-0 !p-0">
-                {currentWeather?.temperature_2m}
-                {CURRENT_UNITS.temperature_2m}
-              </Typography>
+              <div className="bg-blue-500/10 backdrop-blur-md border border-white/20">
+                <Typography variant="caption" className="text-white !m-0 !p-0">
+                  {currentWeather?.temperature_2m}
+                  {CURRENT_UNITS.temperature_2m}
+                </Typography>
+              </div>
             )
           ) : (
             <Typography variant="caption" className="text-white !m-0 !p-0">
@@ -75,23 +77,25 @@ export default function MobileCityCard({
           <div>
             {currentWeather && selectedCity === cityName && (
               <>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "white",
-                  }}
-                >
-                  {dayjs(currentWeather?.time).format("YYYY-MM-DD")}
-                </Typography>
+                <div className="bg-blue-500/10 backdrop-blur-md border border-white/20 p-2">
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "white",
+                    }}
+                  >
+                    {dayjs(currentWeather?.time).format("YYYY-MM-DD")}
+                  </Typography>
 
-                <Typography
-                  variant="h6"
-                  sx={{
-                    color: "white",
-                  }}
-                >
-                  {weather}
-                </Typography>
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "white",
+                    }}
+                  >
+                    {weather}
+                  </Typography>
+                </div>
               </>
             )}
           </div>
