@@ -27,12 +27,16 @@ setInterval(async () => {
         const response = await fetch("https://api.open-meteo.com/v1/forecast?latitude=-37.8136&longitude=144.9631&current=weather_code");
         const data = await response.json();
         console.log("weather", data);
+        if (data.error) {
+            io.emit("weather-alert", {
+                error: data.error,
+                reason: data.reason,
+            });
+        }
         const weatherCode = data.current.weather_code;
         io.emit("weather-alert", {
             city: "Melbourne",
             code: weatherCode,
-            error: data.error,
-            reason: data.reason,
         });
         console.log("weather checked");
     }
