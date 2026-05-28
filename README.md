@@ -1,11 +1,14 @@
 # cityweather# City Weather Platform
 
-[![Next.js](https://img.shields.io/badge/Next.js-13.5+-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.2+-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![Typescript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Clerk](https://img.shields.io/badge/Clerk-Auth%20Solution-4A154B?style=flat)](https://clerk.com/)
 
 ## Preview
-https://cityweather-pink.vercel.app/
+https://cityweather-pink.vercel.app/Weather 
+
+**updates are fetched server-side and broadcast to connected clients using Socket.IO.**
+
 ### Web
 <p align="center">
   <img src="./frontend/public/web-preview.png" width="70%" />
