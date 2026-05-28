@@ -10,6 +10,9 @@ export default function MobileCityMap() {
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
   useEffect(() => {
     socket.on("weather-alert", (data) => {
+      if(data.error){
+        toast.error('Weather service temporarily unavailable.')
+      }
       const weather = WEATHER_CODES[data.code];
       toast.info(`${data.city} Weather Alert: ${weather}`);
     });
@@ -31,7 +34,7 @@ export default function MobileCityMap() {
               cityPic={item.cityPic as string}
               latitude={item.latitude}
               longitude={item.longitude}
-              selectedCity={selectedCity || ''}
+              selectedCity={selectedCity || ""}
               onSelect={setSelectedCity}
             />
           </div>

@@ -14,6 +14,9 @@ export default function Home() {
   useEffect(() => {
     socket.on("weather-alert", (data) => {
       console.log("socket", data);
+      if(data.error){
+        toast.error('Weather service temporarily unavailable.')
+      }
       const weather = WEATHER_CODES[data.code];
       toast.info(`${data.city} Weather Alert: ${weather}`);
     });

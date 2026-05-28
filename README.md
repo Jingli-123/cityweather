@@ -1,10 +1,13 @@
 # cityweather# City Weather Platform
 
-[![Next.js](https://img.shields.io/badge/Next.js-13.5+-black?style=flat&logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.2+-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![Typescript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Clerk](https://img.shields.io/badge/Clerk-Auth%20Solution-4A154B?style=flat)](https://clerk.com/)
 
 ## Preview
+https://cityweather-pink.vercel.app/Weather 
+
+**updates are fetched server-side and broadcast to connected clients using Socket.IO.**
 
 ### Web
 <p align="center">
@@ -15,6 +18,21 @@
 <p align="center">
   <img src="./frontend/public/mobile-preview.png" width="25%" />
 </p>
+
+## Testing
+
+Basic end-to-end testing has been implemented using Playwright to validate core user flows and UI visibility.
+
+Current test coverage includes:
+
+Homepage rendering
+Page title validation
+Navigation bar visibility
+Core frontend interaction checks
+
+GitHub Actions workflow has also been configured to automatically run tests on push and pull request events.
+
+Further test coverage and integration testing would be expanded in future iterations.
 
 ## 🚀 Quick Start
 
@@ -30,7 +48,7 @@ cd cityweather
 ```
 
 2. **Environment Setup**
-Create `.env` files in /backend: `.env` and `.env.local` in the /frontend directory.
+Create `.env` files in /backend；`.env.local` in the /frontend directory.
 
 Edit `.env.local` with your credentials:
 ```env
