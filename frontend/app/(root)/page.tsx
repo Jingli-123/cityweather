@@ -13,6 +13,9 @@ export default function Home() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   useEffect(() => {
     socket.on("weather-alert", (data) => {
+      if(data.error){
+        toast.error('Weather service temporarily unavailable.')
+      }
       const weather = WEATHER_CODES[data.code];
       toast.info(`${data.city} Weather Alert: ${weather}`);
     });

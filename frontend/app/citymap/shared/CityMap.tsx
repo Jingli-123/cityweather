@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CITIES, WEATHER_CODES} from "@/lib/constance";
+import { CITIES, WEATHER_CODES } from "@/lib/constance";
 import PopUp from "./PopUp";
 import { useEffect, useState } from "react";
 import MapPin from "./MapPin";
@@ -14,6 +14,9 @@ export default function CityMap() {
 
   useEffect(() => {
     socket.on("weather-alert", (data) => {
+      if (data.error) {
+        toast.error("Weather service temporarily unavailable.");
+      }
       const weather = WEATHER_CODES[data.code];
       toast.info(`${data.city} Weather Alert: ${weather}`);
     });
