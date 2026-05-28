@@ -33,6 +33,8 @@ setInterval(async () => {
     io.emit("weather-alert", {
       city: "Melbourne",
       code: weatherCode,
+      error:data.error,
+      reason:data.reason,
     });
     console.log("weather checked");
   } catch (error) {
