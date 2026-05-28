@@ -13,6 +13,7 @@ export default function Home() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   useEffect(() => {
     socket.on("weather-alert", (data) => {
+      console.log("socket", data);
       const weather = WEATHER_CODES[data.code];
       toast.info(`${data.city} Weather Alert: ${weather}`);
     });
