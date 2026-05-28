@@ -5,7 +5,9 @@
 [![Clerk](https://img.shields.io/badge/Clerk-Auth%20Solution-4A154B?style=flat)](https://clerk.com/)
 
 ## Preview
-Weather updates are fetched server-side and broadcast to connected clients using Socket.IO.
+https://cityweather-pink.vercel.app/Weather 
+
+**updates are fetched server-side and broadcast to connected clients using Socket.IO.**
 
 ### Web
 <p align="center">
@@ -46,7 +48,7 @@ cd cityweather
 ```
 
 2. **Environment Setup**
-Create `.env` files in /backend: `.env` and `.env.local` in the /frontend directory.
+Create `.env` files in /backend；`.env.local` in the /frontend directory.
 
 Edit `.env.local` with your credentials:
 ```env
