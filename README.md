@@ -5,7 +5,7 @@
 [![Clerk](https://img.shields.io/badge/Clerk-Auth%20Solution-4A154B?style=flat)](https://clerk.com/)
 
 ## Preview
-https://cityweather-pink.vercel.app/Weather 
+https://cityweather-pink.vercel.app/
 
 **updates are fetched server-side and broadcast to connected clients using Socket.IO.**
 
